@@ -5,3 +5,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #0f352e; }
+
+a {
+  color: #389180; }
+  a:hover {
+    color: #5cbaaa; }
