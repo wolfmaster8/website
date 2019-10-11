@@ -1,0 +1,6 @@
+
+#IDE
+.idea/
+
+#Prepros
+scss/prepros-6.config
