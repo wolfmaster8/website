@@ -13,6 +13,25 @@
     <title>Felipe Lobo</title>
 </head>
 <body>
+<div class="container-fluid p-0 bg-felipe-lobo">
+    <div class="d-flex bd-highlight align-items-center mb-3">
+        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center bg-green-light full-height flex-fill">
+            <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="Felipe Lobo">
+            <h1 class="text-center mb-0 h1">Felipe Lobo</h1>
+            <p class="green">JavaScript FullStack Developer</p>
+            <div id="stack" class="stack d-flex">
+                <i data-toggle="tooltip" data-placement="bottom" title="ReactJS" class="fab fa-react p-2  green"></i>
+                <i data-toggle="tooltip" data-placement="bottom" title="NodeJS" class="fab fa-node-js p-2  green"></i>
+                <i data-toggle="tooltip" data-placement="bottom" title="Amazon Web Services"
+                   class="fab fa-aws p-2  green"></i>
+                <i data-toggle="tooltip" data-placement="bottom" title="Docker" class="fab fa-docker p-2  green"></i>
+                <i data-toggle="tooltip" data-placement="bottom" title="Sass" class="fab fa-sass p-2  green"></i>
+            </div>
+        </div>
+        <div class="p-2 align-items-center flex-fill justify-content-end"></div>
+    </div>
+
+</div>
 <div class="container-fluid p-0">
     <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -27,44 +46,28 @@
     </ul>
 
 </div>
-<div class="container-fluid p-0 bg-felipe-lobo">
-    <div class="d-flex bd-highlight align-items-center mb-3">
-        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center bg-green-light full-height flex-fill">
-            <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="Felipe Lobo">
-            <h1 class="text-center mb-0 h1">Felipe Lobo</h1>
-            <p class="green">JavaScript FullStack Developer</p>
-            <div class="stack d-flex">
-                <i class="fab fa-react p-2  green"></i>
-                <i class="fab fa-node-js p-2  green"></i>
-                <i class="fab fa-aws p-2  green"></i>
-                <i class="fab fa-docker p-2  green"></i>
-                <i class="fab fa-sass p-2  green"></i>
-            </div>
-        </div>
-        <div class="p-2 align-items-center flex-fill justify-content-end"></div>
-    </div>
 
-</div>
-
-<div id="about" class="container-fluid ">
-    <div class="d-flex bd-highlight align-items-center mt-5 mb-5 pt-5">
-        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center flex-grow-1">
-            <img class="rounded" src="images/ouch.jpg" width="450" alt="Jump!">
+<!--<div id="about" class="container-fluid ">
+    <div class="row">
+        <div class="col-6">
+            <img class="rounded" src="images/ouch.jpg" width="100%" alt="Jump!">
         </div>
-        <div class="p-2 align-items-center  justify-content-end">
-            <h2 class=" mb-0">Sobre mí</h2>
-            <p class="green ">Tengo una filosofía: "Juntos Crecemos". Soy el tipo de persona que ama compartir todo el
-                conocimiento que he aprendido en los últimos años. Amo crear, innovar y volar. Tengo tres pasiones:
-                aviación, desarrollo y diseño.
-            </p>
-            <p class="green ">
-                La curiosidad innata me llevó a fundar mi primera empresa en el 2016: Bythesea Digital (S9 S.A.S.),
-                empresa especializada en Comunicación Estratégica Digital para empresas.
-            </p>
+        <div class="col-6 ">
+           <div class="d-flex flex-column align-items-center">
+               <h2 class="mb-0">Sobre mí</h2>
+               <p class="green ">
+                   La curiosidad innata me llevó a fundar mi primera empresa en el 2016: Bythesea Digital (S9 S.A.S.),
+                   empresa especializada en Comunicación Estratégica Digital para empresas.
+               </p>
+               <p class="green ">Tengo una filosofía: "Juntos Crecemos". Soy el tipo de persona que ama compartir todo el
+                   conocimiento que he aprendido en los últimos años. Amo crear, innovar y volar. Tengo tres pasiones:
+                   aviación, desarrollo y diseño.
+               </p>
+           </div>
         </div>
     </div>
 
-</div>
+</div>-->
 
 <div id="customers" class="container">
     <div class="mt-5 mb-5 pt-5">
@@ -97,7 +100,7 @@
 <div id="entrepreneurship" class="container">
     <div class="mt-5 mb-5 pt-5">
         <h2 class="text-center">Proyectos GitHub</h2>
-
+        <p class="text-center"> Algunos proyectos que he hecho en mi tiempo libre.</p>
         <div class="row mt-3 pt-3">
             <div class="col-md-4 d-flex align-items-center justify-content-center">
                 <div class="card" style="width: 18rem;">
@@ -118,7 +121,8 @@
                     <div class="card-body">
                         <h5 class="card-title">SpotifyPlay</h5>
                         <h6 class="card-subtitle mb-2 text-muted">React + Spotify API</h6>
-                        <p class="card-text">Una muestra de React con Context API y usando la API de Spotify para mostrar las <i>playlists</i>.</p>
+                        <p class="card-text">Una muestra de React con Context API y usando la API de Spotify para
+                            mostrar las <i>playlists</i>.</p>
                         <a href="https://spotifyplay.felipelobo.co/" target="_blank" class="card-link">Ir al App</a>
                         <a href="https://github.com/wolfmaster8/hello-react" target="_blank" class="card-link">
                             <i class="fab fa-github p-2 green"></i>
@@ -131,9 +135,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Electron + CRA Template</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Electron + React (TS)</h6>
-                        <p class="card-text">Un template para crear una aplicación de Electron con <i>Create React App</i> sin dolores de cabeza.</p>
-                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate/generate" target="_blank" class="card-link">Usar Template</a>
-                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate" target="_blank" class="card-link">
+                        <p class="card-text">Un template para crear una aplicación de Electron con <i>Create React
+                            App</i> sin dolores de cabeza.</p>
+                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate/generate" target="_blank"
+                           class="card-link">Usar Template</a>
+                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate" target="_blank"
+                           class="card-link">
                             <i class="fab fa-github p-2 green"></i>
                         </a>
                     </div>
@@ -175,6 +182,9 @@
                 <a href="https://medium.com/bythesea-digital" target="_blank">
                     <i class="fab fa-medium p-2  green"></i>
                 </a>
+                <a href="https://github.com/wolfmaster8" target="_blank">
+                    <i class="fab fa-github p-2  green"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -189,5 +199,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </html>
