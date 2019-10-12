@@ -13,6 +13,7 @@ a {
 }
 a:hover {
   color: #5cbaaa;
+  text-decoration: none;
 }
 
 p {
@@ -69,6 +70,10 @@ p {
   background: #5cbaaa;
   border-color: #0f352e;
 }
+.form-felipe-lobo button:disabled {
+  background: #5cbaaa;
+  border-color: #0f352e;
+}
 
 .card {
   transition: all 0.2s;
@@ -76,6 +81,20 @@ p {
 .card:hover {
   transition: all 0.2s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.card i {
+  transition: all 0.2s;
+}
+.card i:hover {
+  transition: all 0.2s;
+  color: #0f352e;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .bg-felipe-lobo .bg-green-light {
+    background: rgba(228, 249, 245, 0.9);
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

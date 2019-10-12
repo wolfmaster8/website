@@ -17,8 +17,10 @@ a {
   color: $green;
 
   &:hover {
-    color: $green-light
+    color: $green-light;
+    text-decoration: none;
   }
+
 }
 
 p {
@@ -85,7 +87,11 @@ p {
     &:hover{
       background: $green-light;
       border-color: $green-dark;
+    }
 
+    &:disabled{
+      background: $green-light;
+      border-color: $green-dark;
     }
   }
 }
@@ -95,5 +101,22 @@ p {
   &:hover{
     transition: all 0.2s;
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  }
+  i{
+    transition: all 0.2s;
+    &:hover{
+      transition: all 0.2s;
+      color: $green-dark
+    }
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px){
+  .bg-felipe-lobo{
+    .bg-green-light{
+      background: rgba(228, 249, 245, 0.9);;
+    }
   }
 }
