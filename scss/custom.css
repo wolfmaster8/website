@@ -18,10 +18,16 @@ a:hover {
 p {
   font-family: "Merriweather Sans", sans-serif;
 }
-p.green-dark {
+
+.full-height {
+  min-height: 100vh;
+}
+
+.green-dark {
   color: #0f352e;
 }
-p.green {
+
+.green {
   color: #389180;
 }
 
@@ -35,7 +41,6 @@ p.green {
 
 .bg-green-light {
   background: #e4f9f5;
-  min-height: 100vh;
 }
 
 .logo-bw {
@@ -45,6 +50,32 @@ p.green {
 }
 .logo-bw:hover {
   -webkit-filter: none;
+}
+
+.stack i {
+  font-size: 22px;
+  transition: all 0.2s;
+}
+.stack i:hover {
+  transition: all 0.2s;
+  transform: scale(1.2, 1.2);
+}
+
+.form-felipe-lobo button {
+  background: #0f352e;
+  border-color: #0f352e;
+}
+.form-felipe-lobo button:hover {
+  background: #5cbaaa;
+  border-color: #0f352e;
+}
+
+.card {
+  transition: all 0.2s;
+}
+.card:hover {
+  transition: all 0.2s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=custom.css.map */

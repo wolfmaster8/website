@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/custom.css">
-    <script src="https://kit.fontawesome.com/238f10ca28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+          integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <title>Felipe Lobo</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             <a class="nav-link active" href="#about">Sobre mí</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#projects">Clientes</a>
+            <a class="nav-link" href="#customers">Clientes</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#entrepreneurship">Emprendimiento</a>
@@ -28,11 +29,17 @@
 </div>
 <div class="container-fluid p-0 bg-felipe-lobo">
     <div class="d-flex bd-highlight align-items-center mb-3">
-        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center bg-green-light flex-fill">
-            <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="">
+        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center bg-green-light full-height flex-fill">
+            <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="Felipe Lobo">
             <h1 class="text-center mb-0 h1">Felipe Lobo</h1>
             <p class="green">JavaScript FullStack Developer</p>
-
+            <div class="stack d-flex">
+                <i class="fab fa-react p-2  green"></i>
+                <i class="fab fa-node-js p-2  green"></i>
+                <i class="fab fa-aws p-2  green"></i>
+                <i class="fab fa-docker p-2  green"></i>
+                <i class="fab fa-sass p-2  green"></i>
+            </div>
         </div>
         <div class="p-2 align-items-center flex-fill justify-content-end"></div>
     </div>
@@ -42,7 +49,7 @@
 <div id="about" class="container-fluid ">
     <div class="d-flex bd-highlight align-items-center mt-5 mb-5 pt-5">
         <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center flex-grow-1">
-            <img class="rounded" src="images/ouch.jpg" width="450" alt="">
+            <img class="rounded" src="images/ouch.jpg" width="450" alt="Jump!">
         </div>
         <div class="p-2 align-items-center  justify-content-end">
             <h2 class=" mb-0">Sobre mí</h2>
@@ -59,7 +66,7 @@
 
 </div>
 
-<div id="proyectos" class="container-fluid ">
+<div id="customers" class="container">
     <div class="mt-5 mb-5 pt-5">
         <h2 class="text-center">Empresas que confían</h2>
 
@@ -86,6 +93,92 @@
     </div>
 
 </div>
+
+<div id="entrepreneurship" class="container">
+    <div class="mt-5 mb-5 pt-5">
+        <h2 class="text-center">Proyectos GitHub</h2>
+
+        <div class="row mt-3 pt-3">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Movies Score</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">React + Redux</h6>
+                        <p class="card-text">Una pequeña aplicación para buscar tu película o seria favorita y obtener
+                            la nota promedio.</p>
+                        <a href="https://movies.felipelobo.co/" target="_blank" class="card-link">Ir al App</a>
+                        <a href="https://github.com/wolfmaster8/movies-score" target="_blank" class="card-link">
+                            <i class="fab fa-github p-2 green"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">SpotifyPlay</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">React + Spotify API</h6>
+                        <p class="card-text">Una muestra de React con Context API y usando la API de Spotify para mostrar las <i>playlists</i>.</p>
+                        <a href="https://spotifyplay.felipelobo.co/" target="_blank" class="card-link">Ir al App</a>
+                        <a href="https://github.com/wolfmaster8/hello-react" target="_blank" class="card-link">
+                            <i class="fab fa-github p-2 green"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Electron + CRA Template</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Electron + React (TS)</h6>
+                        <p class="card-text">Un template para crear una aplicación de Electron con <i>Create React App</i> sin dolores de cabeza.</p>
+                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate/generate" target="_blank" class="card-link">Usar Template</a>
+                        <a href="https://github.com/wolfmaster8/electron-cra-boilerplate" target="_blank" class="card-link">
+                            <i class="fab fa-github p-2 green"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container-fluid bg-green-light m-0 pt-3 pb-2">
+        <div class="d-flex align-items-center justify-content-between">
+            <form class="form-inline form-felipe-lobo">
+                <h5 class="mr-3">Suscríbete al newsletter</h5>
+                <div class="form-group mb-2">
+                    <label for="email" class="sr-only">Email</label>
+                    <input placeholder="Tu Email" type="text" class="form-control" name="email" id="email">
+                </div>
+                <button type="submit" class="btn btn-primary ml-2 mb-2">Suscríbete</button>
+            </form>
+            <div class="stack">
+                <a href="https://www.linkedin.com/in/felipelobom/" target="_blank">
+                    <i class="fab fa-linkedin p-2  green"></i>
+                </a>
+                <a href="https://instagram.com/wolfmaster.328" target="_blank">
+                    <i class="fab fa-instagram p-2  green"></i>
+                </a>
+                <a href="https://medium.com/bythesea-digital" target="_blank">
+                    <i class="fab fa-medium p-2  green"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
