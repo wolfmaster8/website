@@ -3,40 +3,98 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/custom.css">
+    <script src="https://kit.fontawesome.com/238f10ca28.js" crossorigin="anonymous"></script>
     <title>Felipe Lobo</title>
 </head>
 <body>
 <div class="container-fluid p-0">
-    <nav class="navbar sticky-top navbar-light navbar-light bg-light">
-        <h1 class=" mb-0 h1">Felipe Lobo</h1>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="#about">Sobre mí</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Proyectos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#entrepreneurship">Emprendimiento</a>
-            </li>
-        </ul>
-    </nav>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#about">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#projects">Clientes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#entrepreneurship">Emprendimiento</a>
+        </li>
+    </ul>
 
 </div>
-<div class="container">
-    <div class="d-flex  bd-highlight mb-3">
-        <div class="p-2 align-items-center flex-fill justify-content-start">ASD</div>
-        <div class="p-2 align-items-center flex-fill justify-content-end">4536</div>
+<div class="container-fluid p-0 bg-felipe-lobo">
+    <div class="d-flex bd-highlight align-items-center mb-3">
+        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center bg-green-light flex-fill">
+            <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="">
+            <h1 class="text-center mb-0 h1">Felipe Lobo</h1>
+            <p class="green">JavaScript FullStack Developer</p>
+
+        </div>
+        <div class="p-2 align-items-center flex-fill justify-content-end"></div>
     </div>
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div id="about" class="container-fluid ">
+    <div class="d-flex bd-highlight align-items-center mt-5 mb-5 pt-5">
+        <div class="p-2 m-0 d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <img class="rounded" src="images/ouch.jpg" width="450" alt="">
+        </div>
+        <div class="p-2 align-items-center  justify-content-end">
+            <h2 class=" mb-0">Sobre mí</h2>
+            <p class="green ">Tengo una filosofía: "Juntos Crecemos". Soy el tipo de persona que ama compartir todo el
+                conocimiento que he aprendido en los últimos años. Amo crear, innovar y volar. Tengo tres pasiones:
+                aviación, desarrollo y diseño.
+            </p>
+            <p class="green ">
+                La curiosidad innata me llevó a fundar mi primera empresa en el 2016: Bythesea Digital (S9 S.A.S.),
+                empresa especializada en Comunicación Estratégica Digital para empresas.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div id="proyectos" class="container-fluid ">
+    <div class="mt-5 mb-5 pt-5">
+        <h2 class="text-center">Empresas que confían</h2>
+
+        <div class="row mt-3 pt-3">
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <a href="https://dtidigital.com.br">
+                    <img class="logo-bw" src="images/clientes/dti.jpeg" width="110" alt="dti digital">
+                </a>
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <a href="https://dtidigital.com.br">
+                    <img class="logo-bw" src="images/clientes/falconi.jpg" width="150" alt="Falconi">
+                </a></div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <a href="https://co.ivao.aero">
+                    <img class="logo-bw" src="images/clientes/ivao-col.png" width="120" alt="IVAO Colombia">
+                </a></div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <a href="https://computerworld.co">
+                    <img class="logo-bw" src="images/clientes/logo-computerworld-red.png" width="150"
+                         alt="Computerworld Colombia">
+                </a></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

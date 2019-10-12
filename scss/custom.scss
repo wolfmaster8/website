@@ -2,6 +2,7 @@
 $green-dark: #0f352e;
 $green-light: #5cbaaa;
 $green: #389180;
+$green-bg: #e4f9f5;
 
 /* Config */
 body{
@@ -18,3 +19,39 @@ a{
     color: $green-light
   }
 }
+
+p{
+  font-family: 'Merriweather Sans', sans-serif;
+  &.green-dark{
+    color: $green-dark
+  }
+  &.green{
+    color: $green
+  }
+}
+
+/* Custom */
+
+.bg-felipe-lobo{
+  background-image: url("../images/rio.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+
+
+.bg-green-light {
+  background: $green-bg;
+  min-height: 100vh;
+}
+
+.logo-bw{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.2s;
+  &:hover{
+    -webkit-filter: none;
+
+  }
+}
+

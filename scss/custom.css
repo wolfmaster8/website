@@ -1,12 +1,50 @@
 /* Variables */
 /* Config */
 body {
-  font-family: 'Philosopher', sans-serif; }
+  font-family: "Philosopher", sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  color: #0f352e; }
+  color: #0f352e;
+}
 
 a {
-  color: #389180; }
-  a:hover {
-    color: #5cbaaa; }
+  color: #389180;
+}
+a:hover {
+  color: #5cbaaa;
+}
+
+p {
+  font-family: "Merriweather Sans", sans-serif;
+}
+p.green-dark {
+  color: #0f352e;
+}
+p.green {
+  color: #389180;
+}
+
+/* Custom */
+.bg-felipe-lobo {
+  background-image: url("../images/rio.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-green-light {
+  background: #e4f9f5;
+  min-height: 100vh;
+}
+
+.logo-bw {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.2s;
+}
+.logo-bw:hover {
+  -webkit-filter: none;
+}
+
+/*# sourceMappingURL=custom.css.map */
