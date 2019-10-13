@@ -1,0 +1,126 @@
+/* Variables */
+$green-dark: #0f352e;
+$green-light: #5cbaaa;
+$green: #389180;
+$green-bg: #e4f9f5;
+
+/* Config */
+body {
+  font-family: 'Philosopher', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $green-dark
+}
+
+a {
+  color: $green;
+
+  &:hover {
+    color: $green-light;
+    text-decoration: none;
+  }
+
+}
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.full-height{
+  min-height: 100vh;
+}
+
+.green-dark {
+  color: $green-dark
+}
+
+.green {
+  color: $green
+}
+
+/* Custom */
+
+.bg-felipe-lobo {
+  background-image: url("../images/rio.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-green-light {
+  background: $green-bg;
+}
+
+.bg-white{
+  background: white;
+}
+
+.logo-bw {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.2s;
+
+  &:hover {
+    -webkit-filter: none;
+
+  }
+}
+
+
+.stack {
+  i {
+    font-size: 22px;
+    transition: all 0.2s;
+
+    &:hover {
+      transition: all 0.2s;
+
+      transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+.form-felipe-lobo{
+
+  button{
+    background: $green-dark;
+    border-color: $green-dark;
+
+    &:hover{
+      background: $green-light;
+      border-color: $green-dark;
+    }
+
+    &:disabled{
+      background: $green-light;
+      border-color: $green-dark;
+    }
+  }
+}
+
+.card{
+  transition: all 0.2s;
+  &:hover{
+    transition: all 0.2s;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  }
+  i{
+    transition: all 0.2s;
+    &:hover{
+      transition: all 0.2s;
+      color: $green-dark
+    }
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px){
+  .bg-felipe-lobo{
+    .bg-green-light{
+      background: rgba(228, 249, 245, 0.9);;
+    }
+  }
+}
