@@ -44,6 +44,10 @@ p {
   background: #e4f9f5;
 }
 
+.bg-white {
+  background: white;
+}
+
 .logo-bw {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
