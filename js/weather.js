@@ -1,5 +1,4 @@
 const getMainInformation = (info) => {
-    console.log(info.weather);
     return {
         location: {
             city: info.name,
@@ -19,7 +18,7 @@ const getMainInformation = (info) => {
 }
 
 const convertTemperatureToCelsius = (kelvin) => {
-    return kelvin - 273.15
+    return (kelvin - 273.15).toFixed(1)
 };
 
 const defineTheme = () => {
@@ -35,28 +34,24 @@ const defineTheme = () => {
 const getIcon = (type) => {
     switch (type) {
         case 'clouds':
-            return {icon: 'cloud', color: 'gray'}
+            return { icon: 'cloud', color: 'gray' }
+        case 'thunderstorm':
+            return { icon: 'cloud-showers-heavy', color: 'gray' }
+        case 'rain':
+            return { icon: 'cloud-rain', color: 'gray' };
+        case 'drizzle':
+            return { icon: 'cloud-sun-rain', color: 'gray' }
+        case 'clear':
+            return { icon: 'sun', color: 'gray' }
+        case 'snow':
+            return { icon: 'snowflake', color: 'gray' }
+
     }
 };
 
-function getWeather() {
-    const weather = {
-        "message": "accurate",
-        "cod": "200",
-        "count": 1,
-        "list": [{
-            "id": 3688689,
-            "name": "Bogota",
-            "coord": {"lat": 4.5981, "lon": -74.0762},
-            "main": {"temp": 287.15, "pressure": 1027, "humidity": 67, "temp_min": 287.15, "temp_max": 287.15},
-            "dt": 1572574172,
-            "wind": {"speed": 2.36, "deg": 68.912},
-            "sys": {"country": "CO"},
-            "rain": null,
-            "snow": null,
-            "clouds": {"all": 40},
-            "weather": [{"id": 802, "main": "Clouds", "description": "scattered clouds", "icon": "03n"}]
-        }]
-    };
-    return getMainInformation(weather.list[0])
+async function getWeather() {
+    const weather = await $.ajax({
+        url: 'https://api.openweathermap.org/data/2.5/weather?APPID=9f1cb634ec747082eb0732356b6d147b&q=ales,fr'
+    });
+    return getMainInformation(weather)
 }

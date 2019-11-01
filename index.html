@@ -229,9 +229,7 @@
 
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script src="js/lib/jQuery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -241,17 +239,21 @@
 <script src="js/weather.js">
 
 </script>
-<script language="JavaScript">
-    const weather = getWeather();
-    console.log(weather);
-    $('#weather .temp').text(`${weather.atmospheric.temperature}°C`)
-    if(weather.theme === 'dark'){
-        $('#weather').addClass('dark')
+<script language="JavaScript" async>
+    new Promise(async resolve => {
+    const weather =  await getWeather();
+        console.log('-->',weather);
+        $('#weather .temp').text(`${weather.atmospheric.temperature}°C`)
+        if(weather.theme === 'dark'){
+            $('#weather').addClass('dark')
 
-    }
-    $('#weather .city').text(weather.location.city)
-    $('#weather .more-information').text(weather.weather.main)
-    $('#weather .icon').addClass(`fa-${weather.icon.icon} ${weather.icon.color}`)
+        }
+        $('#weather .city').text(weather.location.city)
+        $('#weather .more-information').text(weather.weather.main)
+        $('#weather .icon').addClass(`fa-${weather.icon.icon} ${weather.icon.color}`)
+        resolve(weather)
+    })
+
 </script>
 <script>
     $(function () {
