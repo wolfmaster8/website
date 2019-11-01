@@ -4,6 +4,12 @@ $green-light: #5cbaaa;
 $green: #389180;
 $green-bg: #e4f9f5;
 
+/* Colors */
+
+.gray {
+  color: #999999;
+}
+
 /* Config */
 body {
   font-family: 'Philosopher', sans-serif;
@@ -27,7 +33,7 @@ p {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
-.full-height{
+.full-height {
   min-height: 100vh;
 }
 
@@ -53,7 +59,7 @@ p {
   background: $green-bg;
 }
 
-.bg-white{
+.bg-white {
   background: white;
 }
 
@@ -82,44 +88,95 @@ p {
   }
 }
 
-.form-felipe-lobo{
+.form-felipe-lobo {
 
-  button{
+  button {
     background: $green-dark;
     border-color: $green-dark;
 
-    &:hover{
+    &:hover {
       background: $green-light;
       border-color: $green-dark;
     }
 
-    &:disabled{
+    &:disabled {
       background: $green-light;
       border-color: $green-dark;
     }
   }
 }
 
-.card{
+.card {
   transition: all 0.2s;
-  &:hover{
+
+  &:hover {
     transition: all 0.2s;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
-  i{
+
+  i {
     transition: all 0.2s;
-    &:hover{
+
+    &:hover {
       transition: all 0.2s;
       color: $green-dark
     }
   }
 }
 
+#weather {
+  position: fixed;
+  width: 150px;
+  top: 20px;
+  right: 0;
+  z-index: 99999;
+  padding: 10px 0;
+  background: white;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px -1px 11px 4px rgba(0, 0, 0, 0.1);
+
+  &.dark {
+    background: $green-dark;
+
+    .main-values, .more-information {
+      color: $green-light
+    }
+
+  }
+
+  .temp {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 22px;
+  }
+
+  .city {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 13px;
+
+  }
+
+  .more-information {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .main-info {
+    .icon {
+
+      font-size: 30px;
+    }
+
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+}
+
 /* Mobile */
 
-@media screen and (max-width: 768px){
-  .bg-felipe-lobo{
-    .bg-green-light{
+@media screen and (max-width: 768px) {
+  .bg-felipe-lobo {
+    .bg-green-light {
       background: rgba(228, 249, 245, 0.9);;
     }
   }
