@@ -1,7 +1,15 @@
 /* Variables */
 /* Colors */
 .gray {
-  color: #999999;
+  color: #d2d2d2;
+}
+
+.yellow {
+  color: #d8b227;
+}
+
+.rain {
+  color: #93ebff;
 }
 
 /* Config */
@@ -101,7 +109,8 @@ p {
 
 #weather {
   position: fixed;
-  width: 150px;
+  max-width: 370px;
+  min-width: 180px;
   top: 20px;
   right: 0;
   z-index: 99999;
@@ -129,12 +138,9 @@ p {
   font-size: 13px;
   text-align: center;
 }
-#weather .main-info {
-  margin-left: 25px;
-  margin-right: 15px;
-}
 #weather .main-info .icon {
-  font-size: 30px;
+  font-size: 28px;
+  text-align: center;
 }
 
 /* Mobile */
