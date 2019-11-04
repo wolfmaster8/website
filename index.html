@@ -232,38 +232,60 @@
         crossorigin="anonymous"></script>
 <script src="js/weather.js"></script>
 <script>
-    let initialCity = localStorage.getItem('city')
+    let initialCity = localStorage.getItem('city');
     if (!initialCity || initialCity === '0') {
-        initialCity = 'Bogota'
+        initialCity = 'Bogota';
     }
-    fetchWeather(initialCity)
+    fetchWeather(initialCity);
+
     $(function () {
-        const citiesList = ['Bogota', 'Cali', 'Barranquilla', 'Manizales', 'Cucuta', 'Cartagena', 'Leticia', 'Villavicencio', 'Pereira', 'Medellín'].sort()
-        citiesList.forEach(city => {
-            $('#cities').append(`<option ${city === initialCity ? 'selected' : ''} value="${city}">${city}</option> `)
+        const citiesList = [
+            'Bogota,co',
+            'Cali,co',
+            'Barranquilla,co',
+            'Manizales,co',
+            'Cucuta,co',
+            'Cartagena,co',
+            'Leticia,co',
+            'Villavicencio,co',
+            'Pereira,co',
+            'Medellín,co',
+            'Pasto,co',
+            'London',
+            'New York',
+            'Sao Paulo',
+            'Sidney',
+            'Moscow',
+            'Farkhor',
+            'Cairo',
+            'Telegraph Creek'].sort();
+
+        citiesList.forEach((city) => {
+            $('#cities')
+                .append(`<option ${(city === initialCity ? 'selected' : '')} value="${city}">${city.split(',')[0]}</option>`);
         })
     });
 
     $('#cities').change((input) => {
         const city = input.target.value;
         if (city !== '0') {
-            localStorage.setItem('city', city)
+            localStorage.setItem('city', city);
             fetchWeather(city);
         }
     });
 
     function fetchWeather(city = 'Bogota') {
         getWeather(city)
-            .then(result => {
+            .then((result) => {
                 console.log('-->', result);
-                $('#weather .temp').text(`${result.atmospheric.temperature}°C`)
+                $('#weather .temp').text(`${result.atmospheric.temperature}°C`);
                 if (result.theme === 'dark') {
-                    $('#weather').addClass('dark')
+                    $('#weather').addClass('dark');
                 }
-                $('#weather .city').text(result.location.city)
-                $('#weather .more-information').text(result.weather.main)
-                $('#weather .icon').attr('class', 'icon fa').addClass(`fa-${result.icon.icon} ${result.icon.color}`)
-                $('#weather-container').removeClass('d-none')
+                $('#weather .city').text(result.location.city);
+                $('#weather .more-information').text(result.weather.main);
+                $('#weather .icon').attr('class', 'icon fa').addClass(`fa-${result.icon.icon} ${result.icon.color}`);
+                $('#weather-container').removeClass('d-none');
             });
     }
 </script>
