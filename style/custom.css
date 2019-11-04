@@ -1,4 +1,17 @@
 /* Variables */
+/* Colors */
+.gray {
+  color: #d2d2d2;
+}
+
+.yellow {
+  color: #d8b227;
+}
+
+.rain {
+  color: #93ebff;
+}
+
 /* Config */
 body {
   font-family: "Philosopher", sans-serif;
@@ -92,6 +105,42 @@ p {
 .card i:hover {
   transition: all 0.2s;
   color: #0f352e;
+}
+
+#weather {
+  position: fixed;
+  max-width: 370px;
+  min-width: 180px;
+  top: 20px;
+  right: 0;
+  z-index: 99999;
+  padding: 10px 0;
+  background: white;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px -1px 11px 4px rgba(0, 0, 0, 0.1);
+}
+#weather.dark {
+  background: #0f352e;
+}
+#weather.dark .main-values, #weather.dark .more-information {
+  color: #5cbaaa;
+}
+#weather .temp {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+}
+#weather .city {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 13px;
+}
+#weather .more-information {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+#weather .main-info .icon {
+  font-size: 28px;
+  text-align: center;
 }
 
 /* Mobile */

@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/custom.css">
     <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
@@ -22,7 +22,8 @@
                 <img class="rounded-circle" src="images/felipelobo.jpg" width="150" alt="Felipe Lobo">
             </a>
             <h1 class="text-center mb-0 h1 animated fadeInUp delay-1s">Felipe Lobo</h1>
-            <p class="green animated fadeInUp delay-1s text-center">JavaScript FullStack Developer <br> & UX Enthusiast</p>
+            <p class="green animated fadeInUp delay-1s text-center">JavaScript FullStack Developer <br> & UX Enthusiast
+            </p>
             <div id="stack" class="stack d-flex animated fadeInUp delay-1s">
                 <i data-toggle="tooltip" data-placement="bottom" title="ReactJS" class="fab fa-react p-2  green"></i>
                 <i data-toggle="tooltip" data-placement="bottom" title="NodeJS" class="fab fa-node-js p-2  green"></i>
@@ -51,7 +52,19 @@
             <a class="nav-link" href="#entrepreneurship">Emprendimiento</a>
         </li>
     </ul>
+</div>
 
+<div id="weather-container" class="d-none">
+    <div id="weather" class="d-flex align-items-center justify-content-around">
+        <div class="main-values">
+            <div class="temp"></div>
+            <div class="city"></div>
+        </div>
+        <div class="main-info d-flex flex-column">
+            <div class="more-information"></div>
+            <i class="icon fa"></i>
+        </div>
+    </div>
 </div>
 
 <div id="about" class="container mt-5 mt-5">
@@ -177,7 +190,8 @@
 
 <div class="container d-flex justify-content-center my-5">
     <blockquote class="blockquote">
-        <p class="mb-0">Yo sé hacer algo que tú no sabes, tu sabes hacer algo que yo no sé, Juntos podemos hacer Grandes cosas.</p>
+        <p class="mb-0">Yo sé hacer algo que tú no sabes, tu sabes hacer algo que yo no sé, Juntos podemos hacer Grandes
+            cosas.</p>
         <footer class="blockquote-footer">Madre Teresa de Calcuta</footer>
     </blockquote>
 </div>
@@ -185,14 +199,11 @@
 <footer>
     <div class="container-fluid bg-green-light m-0 pt-3 pb-2">
         <div class="d-flex align-items-center flex-column flex-md-row justify-content-between">
-            <h5 class="mr-3">Déjame tu email</h5>
-            <form class="form-inline form-felipe-lobo">
-                <div class="form-group mb-2">
-                    <label for="email" class="sr-only">Email</label>
-                    <input placeholder="Tu Email" type="text" class="form-control" name="email" id="email">
-                </div>
-                <button disabled type="submit" class="btn btn-primary ml-2 mb-2"><span data-toggle="tooltip" data-placement="top" title="Próximamente">Suscríbete</span></button>
-            </form>
+            <h5 class="mr-3">Elige tu ciudad</h5>
+            <select class="city form-control w-25" name="city" id="cities">
+                <option value="0">--Selecciona--</option>
+
+            </select>
             <div class="stack flex-grow-1 d-flex justify-content-end">
                 <a href="https://www.linkedin.com/in/felipelobom/" target="_blank">
                     <i class="fab fa-linkedin p-2  green"></i>
@@ -212,15 +223,72 @@
 
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script src="js/lib/jQuery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="js/weather.js"></script>
+<script>
+    let initialCity = localStorage.getItem('city');
+    if (!initialCity || initialCity === '0') {
+        initialCity = 'Bogota';
+    }
+    fetchWeather(initialCity);
+
+    $(function () {
+        const citiesList = [
+            'Bogota,co',
+            'Cali,co',
+            'Barranquilla,co',
+            'Manizales,co',
+            'Cucuta,co',
+            'Cartagena,co',
+            'Leticia,co',
+            'Villavicencio,co',
+            'Pereira,co',
+            'Medellín,co',
+            'Pasto,co',
+            'London',
+            'New York',
+            'Sao Paulo',
+            'Sidney',
+            'Moscow',
+            'Farkhor',
+            'Cairo',
+            'Telegraph Creek'].sort();
+
+        citiesList.forEach((city) => {
+            $('#cities')
+                .append(`<option ${(city === initialCity ? 'selected' : '')} value="${city}">${city.split(',')[0]}</option>`);
+        })
+    });
+
+    $('#cities').change((input) => {
+        const city = input.target.value;
+        if (city !== '0') {
+            localStorage.setItem('city', city);
+            fetchWeather(city);
+        }
+    });
+
+    function fetchWeather(city = 'Bogota') {
+        getWeather(city)
+            .then((result) => {
+                console.log('-->', result);
+                $('#weather .temp').text(`${result.atmospheric.temperature}°C`);
+                if (result.theme === 'dark') {
+                    $('#weather').addClass('dark');
+                }
+                $('#weather .city').text(result.location.city);
+                $('#weather .more-information').text(result.weather.main);
+                $('#weather .icon').attr('class', 'icon fa').addClass(`fa-${result.icon.icon} ${result.icon.color}`);
+                $('#weather-container').removeClass('d-none');
+            });
+    }
+</script>
 
 <script>
     $(function () {
